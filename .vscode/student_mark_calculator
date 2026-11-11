@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main()
+{
+    char studentName[50];
+    int test1, test2, assignment;
+    int total;
+
+    printf("Enter Student Name: ");
+    scanf("%49s", studentName);
+
+    printf("Enter Test 1 Mark: ");
+    scanf("%d", &test1);
+
+    printf("Enter Test 2 Mark: ");
+    scanf("%d", &test2);
+
+    printf("Enter Assignment Mark: ");
+    scanf("%d", &assignment);
+
+    total = test1 + test2 + assignment;
+
+    printf("\nStudent Name: %s\n", studentName);
+    printf("Total Marks: %d\n", total);
+
+    if (total >= 75)
+    {
+        printf("Result: Distinction\n");
+    }
+    else if (total >= 60)
+    {
+        printf("Result: Credit\n");
+    }
+    else if (total >= 50)
+    {
+        printf("Result: Pass\n");
+    }
+    else
+    {
+        printf("Result: Fail\n");
+    }
+
+    return 0;
+}
