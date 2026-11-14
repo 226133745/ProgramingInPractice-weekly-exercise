@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+float calculateBudget(float revenue, float expenses)
+{
+    return revenue - expenses;
+}
+
+int main()
+{
+    float revenue, expenses, balance;
+
+    printf("Enter Revenue: ");
+    scanf("%f", &revenue);
+
+    printf("Enter Expenses: ");
+    scanf("%f", &expenses);
+
+    balance = calculateBudget(revenue, expenses);
+
+    printf("Balance: %.2f\n", balance);
+
+    if(balance > 0)
+        printf("SURPLUS\n");
+    else if(balance < 0)
+        printf("DEFICIT\n");
+    else
+        printf("BALANCED\n");
+
+    return 0;
+}
